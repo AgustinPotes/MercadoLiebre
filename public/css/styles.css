@@ -4,6 +4,7 @@
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 header {
@@ -15,6 +16,7 @@ header {
     top: 0;
     z-index: 100;
     flex-wrap: nowrap;
+    
 }
 
 .main-container {
@@ -27,9 +29,7 @@ header {
 .main {
     background-color: lightgray;
     margin-top: 180px;
-    /*text-align: center;*/
 }
-
 
 .main-header-top-bar {
     display: flex;
@@ -275,7 +275,7 @@ h3 {
     color: gray;
 }
 
-h4 {
+.description {
     font-size: 16px;
     font-weight: bold;
     color: gray;
@@ -284,8 +284,16 @@ h4 {
     display: none;
 }
 
-h4:hover {
+.description:hover {
     display: inline;
+}
+
+h4 {
+    font-size: 16px;
+    font-weight: bold;
+    color: gray;
+    background-color: white;
+    padding: 10px;
 }
 
 .parrafo-centrado {
@@ -302,19 +310,40 @@ h4:hover {
 
 .fa-credit-card {
     margin-bottom: 10px;
+    font-size: 2em;
+    transition: all 0.5s;
+}
+
+.fa-credit-card:hover {
+    color: #EAC926;
 }
 
 .fa-gift {
     margin-bottom: 10px;
+    font-size: 2em;
+    transition: all 0.5s;
+}
+
+.fa-gift:hover {
+    color: #EAC926;
 }
 
 .fa-user-shield {
     margin-bottom: 10px;
+    font-size: 2em;
+    transition: all 0.5s;
+}
+
+.fa-user-shield:hover {
+    color: #EAC926;
 }
 
 .copyright {
+    display: flex;
     padding: 15px;
     font-size: 15px;
+    align-self: center;
+    margin: auto;
 }
 
 
@@ -352,7 +381,6 @@ h4:hover {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        /*flex-wrap: nowrap;*/
     }
     .copy-header {
         max-width: 30vw;
@@ -368,7 +396,7 @@ h4:hover {
     .main-navbar li {
         margin: 0 5px;
     }
-    h4 {
+    .description {
         display: block;
     }
     .display-articulos {
@@ -388,9 +416,21 @@ h4:hover {
         display: flex;
         margin: auto;
         width: 30vw;
+        margin: 0 1.5em 0 1.5em;
+        font-size: 1em;
     }
     p {
         font-size: 1.2em;
+    }
+    .main-container-footer {
+        display: flex;
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        bottom: 0;
+    }
+    .parrafo-centrado {
+        max-width: 33vw;
     }
 }
 
@@ -401,6 +441,8 @@ h4:hover {
     }
     .main-header-top-bar {
         align-items: center;
+        justify-content: space-between;
+        max-width: 90%;
     }
     .create-form {
         margin-top: 230px
@@ -418,11 +460,13 @@ h4:hover {
         max-width: 25vw;
     }
     .search-bar {
-        margin: auto;
-        width: 30vw;
+        max-width: 25vw;
+        padding: 15px;
+        margin: center;
+        margin: 0 1.5em 0 5.2em;
     }
     .copy-header {
-        width: 15vw;
+        max-width: 15vw;
         margin: right;
         text-align: right;
         font-size: 17px;
@@ -431,18 +475,15 @@ h4:hover {
         max-width: 23%;
         flex-grow: 0.25;
     }
-    footer {
-        display: flex;
-        margin-top: 15px;
-        flex-wrap: nowrap;
-        justify-content: space-around;
-        bottom: 0;
-    }
-    .parrafo-centrado {
-        width: 50vw;
-    }
     .copyright {
         display: flex;
+        margin-top: 80px;
+        font-size: 0.8em;
+    }
+}
+
+@media(min-width: 1920px) {
+    .create-form {
         margin-top: 300px;
     }
 }
